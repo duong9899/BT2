@@ -141,6 +141,7 @@ namespace BT2.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
+            Session["idUser"] = null;
             return RedirectToAction("Index", "Home");
         }
 
